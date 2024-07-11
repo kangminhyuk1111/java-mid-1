@@ -1,26 +1,26 @@
-package lang.object.immutable.adress;
+package lang.immutable.adress;
 
-public class MemberV1 {
+public class MemberV2 {
 
     private String name;
-    private Address address;
+    private ImmutableAddress address;
 
-    public MemberV1(final String name, final Address address) {
+    public MemberV2(final String name, final ImmutableAddress address) {
         this.name = name;
         this.address = address;
     }
 
-    public Address getAddress() {
+    public ImmutableAddress getAddress() {
         return address;
     }
 
-    public void setAddress(final Address address) {
+    public void setAddress(final ImmutableAddress address) {
         this.address = address;
     }
 
     @Override
     public String toString() {
-        return "MemberV1{" +
+        return "MemberV2{" +
                 "name='" + name + '\'' +
                 ", address=" + address +
                 '}';
