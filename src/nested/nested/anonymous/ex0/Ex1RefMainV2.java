@@ -2,9 +2,18 @@ package nested.nested.anonymous.ex0;
 
 import java.util.Random;
 
-public class Ex1Main {
+public class Ex1RefMainV2 {
 
-    public static void helloDice() {
+    public static void hello(Process process) {
+        System.out.println("start");
+
+        process.run();
+
+        System.out.println("end");
+    }
+
+    public static void main(String[] args) {
+
         class Dice implements Process {
             @Override
             public void run() {
@@ -12,10 +21,8 @@ public class Ex1Main {
                 System.out.println("randomValue = " + randomValue);
             }
         }
-    }
 
-    public static void helloSum() {
-        class Dice implements Process {
+        class Sum implements Process {
             @Override
             public void run() {
                 for (int i = 0; i < 3; i++) {
@@ -24,16 +31,7 @@ public class Ex1Main {
             }
         }
 
-        final Dice dice = new Dice();
-    }
-
-    public static void hello(Process dice) {
-        System.out.println("start");
-        System.out.println("end");
-    }
-
-    public static void main(String[] args) {
-        helloDice();
-        helloSum();
+        hello(new Dice());
+        hello(new Sum());
     }
 }

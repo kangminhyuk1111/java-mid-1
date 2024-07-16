@@ -1,6 +1,7 @@
-package nested.nested.anonymous.ex0;
+package nested.nested.test;
 
 public interface Hello {
 
     void hello();
+
 }
